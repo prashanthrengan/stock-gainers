@@ -1,0 +1,13 @@
+﻿US Open Momentum Scan - Run Log
+Run time (UTC): 2026-05-25T14:03:44.5220955Z
+Workspace: C:\Users\bhara\Documents\Codex\2026-05-19\files-mentioned-by-the-user-stock
+
+Status: BLOCKED
+Blocker 1: Python interpreter not found on PATH (python/py/python3 all missing).
+Blocker 2: SMTP env vars missing (SMTP_HOST, SMTP_USERNAME, SMTP_PASSWORD).
+
+Next steps:
+- Install Python 3.x and ensure 'python' is on PATH, then run: python scripts/run_scheduled_stock_discovery.py --scan us_open
+- Set SMTP_* env vars (or GitHub Secrets) and re-run: python scripts/email_latest_report.py --scan us_open
+
+Research-only reminder: outputs are for discussion, not financial advice.
