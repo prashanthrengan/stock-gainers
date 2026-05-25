@@ -1,0 +1,13 @@
+Stock Discovery Momentum Report - us_open
+Generated: 2026-05-19T22:14:42+00:00
+
+Top candidates:
+1. ALAB - Needs confirmation; move 13.303642; confidence 2/5; hold zone 219.83 - 268.69; trim review 280.90; next: Fill missing analyst or estimate fields.
+2. AGYS - Needs confirmation; move 12.450151; confidence 2/5; hold zone 71.05 - 86.83; trim review 90.78; next: Fill missing analyst or estimate fields.
+3. RXO - Needs confirmation; move 10.6283; confidence 2/5; hold zone 19.02 - 23.24; trim review 24.30; next: Fill missing analyst or estimate fields.
+4. CMBT - Needs confirmation; move 10.2922; confidence 2/5; hold zone 14.95 - 18.27; trim review 19.10; next: Fill missing analyst or estimate fields.
+5. CLSK - Needs confirmation; move 9.300595; confidence 2/5; hold zone 13.22 - 16.16; trim review 16.89; next: Fill missing analyst or estimate fields.
+6. TENB - Needs confirmation; move 9.212799; confidence 2/5; hold zone 22.73 - 27.77; trim review 29.04; next: Fill missing analyst or estimate fields.
+7. MXL - Needs confirmation; move 8.461013; confidence 2/5; hold zone 85.37 - 104.35; trim review 109.09; next: Fill missing analyst or estimate fields.
+
+Research reminder: this is a watchlist and discussion aid, not financial advice.

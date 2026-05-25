@@ -1,0 +1,13 @@
+Stock Discovery Momentum Report - us_open
+Generated: 2026-05-19T22:35:46+00:00
+
+Top candidates:
+1. ALAB - Watchlist candidate; move 13.303642; RVOL 1.80; catalyst earnings; confidence 3/5; hold zone 202.25 - 286.27; trim review 262.93; analyst 1.8 - Buy; upside -0.7%; next: Confirm catalyst quality and watch next-session follow-through.
+2. AGYS - Watchlist candidate; move 12.450151; RVOL 8.80; catalyst earnings; confidence 3/5; hold zone 68.70 - 128.00; trim review 128.00; analyst N/A; upside 62.1%; next: Confirm catalyst quality and watch next-session follow-through.
+3. RXO - Speculative / news-only; move 10.6283; RVOL 2.57; catalyst guidance; confidence 2/5; hold zone 17.71 - 21.27; trim review 21.27; analyst 2.7 - Hold; upside 0.7%; next: Verify whether the move has a durable business catalyst.
+4. CMBT - Watchlist candidate; move 10.2922; RVOL 4.45; catalyst earnings; confidence 3/5; hold zone 15.45 - 17.50; trim review 17.50; analyst 1.8 - Buy; upside 5.4%; next: Confirm catalyst quality and watch next-session follow-through.
+5. CLSK - Speculative / news-only; move 9.300595; RVOL 1.71; catalyst earnings; confidence 2/5; hold zone 12.43 - 20.38; trim review 20.38; analyst 1.3 - Strong Buy; upside 38.7%; next: Verify whether the move has a durable business catalyst.
+6. TENB - Watchlist candidate; move 9.212799; RVOL 1.94; catalyst sector_move; confidence 3/5; hold zone 24.73 - 27.35; trim review 27.35; analyst N/A; upside 8.3%; next: Confirm catalyst quality and watch next-session follow-through.
+7. MXL - Speculative / news-only; move 8.461013; RVOL 1.39; catalyst sector_move; confidence 2/5; hold zone 72.28 - 117.44; trim review 104.24; analyst 1.8 - Buy; upside -47.9%; next: Verify whether the move has a durable business catalyst.
+
+Research reminder: this is a watchlist and discussion aid, not financial advice.

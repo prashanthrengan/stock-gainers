@@ -1,0 +1,13 @@
+Stock Discovery Momentum Report - us_open
+Generated: 2026-05-19T22:25:17+00:00
+
+Top candidates:
+1. ALAB - Speculative / news-only; move 13.303642; confidence 2/5; hold zone 202.25 - 286.27; trim review 262.93; next: Verify whether the move has a durable business catalyst.
+2. AGYS - Speculative / news-only; move 12.450151; confidence 2/5; hold zone 68.76 - 89.36; trim review 145.38; next: Verify whether the move has a durable business catalyst.
+3. RXO - Speculative / news-only; move 10.6283; confidence 2/5; hold zone 17.71 - 24.55; trim review 23.37; next: Verify whether the move has a durable business catalyst.
+4. CMBT - Speculative / news-only; move 10.2922; confidence 2/5; hold zone 15.45 - 17.77; trim review 17.07; next: Verify whether the move has a durable business catalyst.
+5. CLSK - Speculative / news-only; move 9.300595; confidence 2/5; hold zone 12.43 - 16.95; trim review 23.62; next: Verify whether the move has a durable business catalyst.
+6. TENB - Speculative / news-only; move 9.212799; confidence 2/5; hold zone 24.71 - 27.88; trim review 35.71; next: Verify whether the move has a durable business catalyst.
+7. MXL - Speculative / news-only; move 8.461013; confidence 2/5; hold zone 72.28 - 117.44; trim review 104.24; next: Verify whether the move has a durable business catalyst.
+
+Research reminder: this is a watchlist and discussion aid, not financial advice.

@@ -1,0 +1,100 @@
+name: Stock Discovery Reports
+
+on:
+  workflow_dispatch:
+    inputs:
+      scan:
+        description: "Report scan"
+        required: true
+        default: "us_open"
+        type: choice
+        options:
+          - europe_open
+          - europe_pre_close
+          - us_open
+          - us_pre_close
+      input_csv:
+        description: "Optional CSV path inside repo, for example data/latest/gainers.csv"
+        required: false
+        default: ""
+  schedule:
+    # GitHub cron is UTC. These are Stockholm summer-time mappings.
+    # During winter time, adjust by one hour or run manually.
+    - cron: "30 7 * * 1-5"   # Europe open +30m, 09:30 Stockholm summer time
+    - cron: "0 15 * * 1-5"   # Europe pre-close, 17:00 Stockholm summer time
+    - cron: "0 14 * * 1-5"   # US open +30m, 16:00 Stockholm summer time
+    - cron: "30 19 * * 1-5"  # US pre-close, 21:30 Stockholm summer time
+
+jobs:
+  stock-discovery:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Resolve scan name
+        id: scan
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "scan=${{ inputs.scan }}" >> "$GITHUB_OUTPUT"
+            echo "input_csv=${{ inputs.input_csv }}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          minute_hour="$(date -u +'%M %H')"
+          case "$minute_hour" in
+            "30 07") scan="europe_open" ;;
+            "00 15") scan="europe_pre_close" ;;
+            "00 14") scan="us_open" ;;
+            "30 19") scan="us_pre_close" ;;
+            *) scan="manual" ;;
+          esac
+          echo "scan=$scan" >> "$GITHUB_OUTPUT"
+          echo "input_csv=" >> "$GITHUB_OUTPUT"
+
+      - name: Run stock discovery report
+        run: |
+          python scripts/run_scheduled_stock_discovery.py \
+            --scan "${{ steps.scan.outputs.scan }}" \
+            --input-csv "${{ steps.scan.outputs.input_csv }}"
+
+      - name: Upload report artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: stock-discovery-${{ steps.scan.outputs.scan }}-${{ github.run_id }}
+          path: outputs/${{ steps.scan.outputs.scan }}/
+          if-no-files-found: error
+
+      - name: Email report
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          REPORT_TO: prashanthrengan@gmail.com
+        run: |
+          python scripts/email_latest_report.py --scan "${{ steps.scan.outputs.scan }}"
+
+      - name: Commit reports back to repo
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/
+          if git diff --cached --quiet; then
+            echo "No report changes to commit."
+          else
+            git commit -m "Add stock discovery report for ${{ steps.scan.outputs.scan }}"
+            git push
+          fi
+

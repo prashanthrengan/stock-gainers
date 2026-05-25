@@ -1,0 +1,7 @@
+# Stock Discovery CSV Schema
+
+Stable output columns for the skill workflow.
+
+```csv
+Rank,Symbol,Company,Theme,Price,Change($),Change(%),Volume,Dollar Volume,RVOL 20D,Catalyst Type,Catalyst Summary,Catalyst Score,Catalyst Confidence,Market Cap,Enterprise Value,PS Ratio,Forward PE,PEG Ratio,Rev Growth YoY,EPS Growth YoY,Gross Margin,Operating Margin,FCF Margin,Analyst Rating,Analyst Count,Buy Count,Hold Count,Sell Count,Target Low,Target Avg,Target High,Implied Upside %,Next FY Revenue Estimate,Next FY Revenue Growth Estimate,Next FY EPS Estimate,Next FY EPS Growth Estimate,Estimate Revision Trend,50-Day MA,200-Day MA,Price vs 50D MA %,Price vs 200D MA %,Dist 52W High %,RSI 14,ATR 14 %,Float Shares,Short % Float,Recent Offering,Dilution Risk,Low Float,Growth Score,Quality Score,Momentum Score,Valuation Score,Liquidity Score,Risk Score,Final Score,Support Price,Stop Review Price,Hold Zone Low,Hold Zone High,Trim / Partial Sell Price,Stretch Sell Price,Price Level Basis,Growth Analyst Note,Growth Analyst Confidence,Growth Analyst Reason,Momentum Analyst Note,Momentum Analyst Confidence,Momentum Analyst Reason,Valuation Analyst Note,Valuation Analyst Confidence,Valuation Analyst Reason,Risk Analyst Note,Risk Analyst Confidence,Risk Analyst Reason,PM Verdict,PM Confidence,PM Reason,Recommendation,Confidence 1-5,Next Research Step,Data Quality Notes,Analyst Data Quality,Input Source,Run Timestamp
+```
