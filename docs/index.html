@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stock Gainers Dashboard - 2026-05-25</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #111827; }
+    header { padding: 24px 28px 14px; border-bottom: 1px solid #e5e7eb; background: #ffffff; }
+    h1 { margin: 0 0 6px; font-size: 24px; line-height: 1.2; }
+    .meta { margin: 0; color: #64748b; font-size: 14px; }
+    .legend { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .legend span { border: 1px solid #e5e7eb; background: #f9fafb; border-radius: 6px; padding: 5px 8px; font-size: 12px; }
+    main { padding: 18px 24px 32px; }
+    .wrap { overflow-x: auto; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; }
+    table { width: 100%; border-collapse: collapse; min-width: 1500px; }
+    th { position: sticky; top: 0; background: #1f2937; color: #fff; text-align: left; padding: 10px 12px; font-size: 12px; white-space: nowrap; cursor: pointer; }
+    td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; font-size: 13px; vertical-align: top; }
+    tr:hover td { background: #f8fafc; }
+    small { display: block; color: #64748b; margin-top: 2px; }
+    .symbol strong { display: block; font-size: 14px; }
+    .gain { color: #16a34a; font-weight: 700; }
+    .loss { color: #dc2626; font-weight: 700; }
+    .badge { color: #fff; border-radius: 999px; padding: 4px 8px; white-space: nowrap; font-size: 12px; font-weight: 700; }
+    .score { width: 82px; height: 8px; background: #e5e7eb; border-radius: 999px; overflow: hidden; }
+    .score span { display: block; height: 8px; border-radius: 999px; }
+    .desc { color: #475569; max-width: 260px; line-height: 1.35; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Stock Gainers Dashboard - 2026-05-25</h1>
+    <p class="meta">Updated: 2026-05-25 14:12 UTC. Data from Yahoo Finance/yfinance. Research only, not financial advice.</p>
+    <div class="legend">
+      <span>Watchlist: score >= 70</span>
+      <span>Needs confirmation: score 45-69</span>
+      <span>Speculative: score below 45</span>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <table id="tbl">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">Symbol</th>
+            <th onclick="sortTable(1)">Sector</th>
+            <th onclick="sortTable(2)">Industry</th>
+            <th onclick="sortTable(3)">Price</th>
+            <th onclick="sortTable(4)">Change %</th>
+            <th onclick="sortTable(5)">RVOL</th>
+            <th onclick="sortTable(6)">RSI</th>
+            <th onclick="sortTable(7)">50D MA</th>
+            <th onclick="sortTable(8)">P/S</th>
+            <th onclick="sortTable(9)">Rev Growth</th>
+            <th onclick="sortTable(10)">Op Margin</th>
+            <th onclick="sortTable(11)">Analyst</th>
+            <th onclick="sortTable(12)">Target</th>
+            <th onclick="sortTable(13)">Upside</th>
+            <th onclick="sortTable(14)">Score</th>
+            <th onclick="sortTable(15)">Bucket</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+    <tr>
+      <td class="symbol"><strong>RGTI</strong><small>Rigetti Computing, Inc.</small></td>
+      <td>Technology</td>
+      <td>Computer Hardware</td>
+      <td>$26.42</td>
+      <td class="gain">19.87%</td>
+      <td>6.07</td>
+      <td>68.9</td>
+      <td>16.92</td>
+      <td>876.79</td>
+      <td>198.9%</td>
+      <td>-589.8%</td>
+      <td>1.8 - Buy<small>B:9 H:3 S:1</small></td>
+      <td>29.24</td>
+      <td>10.7%</td>
+      <td><div class="score"><span style="width:85%;background:#16a34a"></span></div><small>85</small></td>
+      <td><span class="badge" style="background:#16a34a">Watchlist</span></td>
+      <td class="desc">Rigetti Computing, Inc., through its subsidiaries, builds and operates quantum computers and the superconducting quantum processors the United States, the United Kingdom, rest of Europe, Asia, and internationally. The co</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>QBTS</strong><small>D-Wave Quantum Inc.</small></td>
+      <td>Technology</td>
+      <td>Computer Hardware</td>
+      <td>$29.4</td>
+      <td class="gain">14.22%</td>
+      <td>4.39</td>
+      <td>66.8</td>
+      <td>18.59</td>
+      <td>875.21</td>
+      <td>-80.9%</td>
+      <td>-1914.9%</td>
+      <td>1.3 - Strong Buy<small>B:13 H:2 S:0</small></td>
+      <td>35.17</td>
+      <td>19.6%</td>
+      <td><div class="score"><span style="width:65%;background:#d97706"></span></div><small>65</small></td>
+      <td><span class="badge" style="background:#d97706">Confirm</span></td>
+      <td class="desc">D-Wave Quantum Inc. engages in the development and delivery of quantum computing systems, software, and services worldwide. It provides Advantage and Advantage 2 quantum computers; Ocean, a suite of open-source tools; an</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>INFQ</strong><small>Infleqtion, Inc.</small></td>
+      <td>Technology</td>
+      <td>Software - Infrastructure</td>
+      <td>$16.35</td>
+      <td class="gain">11.22%</td>
+      <td>7.32</td>
+      <td>64.5</td>
+      <td>12.17</td>
+      <td>106.11</td>
+      <td>13.9%</td>
+      <td>-354.9%</td>
+      <td>1.0 - Strong Buy<small>B:2 H:0 S:0</small></td>
+      <td>21.0</td>
+      <td>28.4%</td>
+      <td><div class="score"><span style="width:65%;background:#d97706"></span></div><small>65</small></td>
+      <td><span class="badge" style="background:#d97706">Confirm</span></td>
+      <td class="desc">Infleqtion, Inc. engages in the development and commercialization of quantum technology products in the United States, Europe, and Asia. It delivers neutral atom solutions for quantum computing, networking, sensing, and </td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>PTON</strong><small>Peloton Interactive, Inc.</small></td>
+      <td>Consumer Cyclical</td>
+      <td>Leisure</td>
+      <td>$5.71</td>
+      <td class="gain">10.23%</td>
+      <td>2.6</td>
+      <td>64.2</td>
+      <td>4.83</td>
+      <td>1.01</td>
+      <td>1.1%</td>
+      <td>9.5%</td>
+      <td>2.2 - Buy<small>B:9 H:11 S:1</small></td>
+      <td>8.03</td>
+      <td>40.7%</td>
+      <td><div class="score"><span style="width:65%;background:#d97706"></span></div><small>65</small></td>
+      <td><span class="badge" style="background:#d97706">Confirm</span></td>
+      <td class="desc">Peloton Interactive, Inc. provides fitness and wellness products and services in North America and internationally. The company offers connected fitness products, such as the Peloton Bike, Peloton Bike+, Peloton Tread, P</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>DELL</strong><small>Dell Technologies Inc.</small></td>
+      <td>Technology</td>
+      <td>Computer Hardware</td>
+      <td>$295.19</td>
+      <td class="gain">16.77%</td>
+      <td>1.85</td>
+      <td>74.7</td>
+      <td>201.1</td>
+      <td>1.69</td>
+      <td>39.5%</td>
+      <td>9.6%</td>
+      <td>2.0 - Buy<small>B:18 H:7 S:2</small></td>
+      <td>212.22</td>
+      <td>-28.1%</td>
+      <td><div class="score"><span style="width:50%;background:#d97706"></span></div><small>50</small></td>
+      <td><span class="badge" style="background:#d97706">Confirm</span></td>
+      <td class="desc">Dell Technologies Inc. designs, develops, manufactures, markets, sells, and supports various comprehensive and integrated solutions, products, and services in the Americas, Europe, the Middle East, Asia, and internationa</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>FLY</strong><small>Firefly Aerospace Inc.</small></td>
+      <td>Industrials</td>
+      <td>Aerospace &amp; Defense</td>
+      <td>$49.5</td>
+      <td class="gain">15.49%</td>
+      <td>1.4</td>
+      <td>72.4</td>
+      <td>34.62</td>
+      <td>42.9</td>
+      <td>44.8%</td>
+      <td>-115.9%</td>
+      <td>1.8 - Buy<small>B:6 H:3 S:0</small></td>
+      <td>47.12</td>
+      <td>-4.8%</td>
+      <td><div class="score"><span style="width:50%;background:#d97706"></span></div><small>50</small></td>
+      <td><span class="badge" style="background:#d97706">Confirm</span></td>
+      <td class="desc">Firefly Aerospace Inc. operates as a space and defense technology company and provides mission solutions for national security, government, and commercial customers. The company offers integrated launch and space service</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>CRDO</strong><small>Credo Technology Group Holding Ltd</small></td>
+      <td>Technology</td>
+      <td>Semiconductors</td>
+      <td>$218.41</td>
+      <td class="gain">12.94%</td>
+      <td>1.16</td>
+      <td>61.5</td>
+      <td>149.84</td>
+      <td>37.72</td>
+      <td>201.5%</td>
+      <td>36.8%</td>
+      <td>N/A<small>B:17 H:1 S:0</small></td>
+      <td>209.09</td>
+      <td>-4.3%</td>
+      <td><div class="score"><span style="width:50%;background:#d97706"></span></div><small>50</small></td>
+      <td><span class="badge" style="background:#d97706">Confirm</span></td>
+      <td class="desc">Credo Technology Group Holding Ltd provides various high-speed connectivity solutions for optical and electrical Ethernet, and PCIe applications in the United States, Taiwan, Mainland China, Hong Kong, and internationall</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>NTAP</strong><small>NetApp, Inc.</small></td>
+      <td>Technology</td>
+      <td>Software - Infrastructure</td>
+      <td>$139.36</td>
+      <td class="gain">12.44%</td>
+      <td>2.84</td>
+      <td>85.5</td>
+      <td>108.17</td>
+      <td>4.11</td>
+      <td>4.4%</td>
+      <td>25.2%</td>
+      <td>2.4 - Buy<small>B:8 H:11 S:1</small></td>
+      <td>117.6</td>
+      <td>-15.6%</td>
+      <td><div class="score"><span style="width:50%;background:#d97706"></span></div><small>50</small></td>
+      <td><span class="badge" style="background:#d97706">Confirm</span></td>
+      <td class="desc">NetApp, Inc. provides a range of enterprise software, systems, and services that customers use to transform their data infrastructures in the United States, Canada, Latin America, Europe, the Middle East, Africa, and the</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>LUNR</strong><small>Intuitive Machines, Inc.</small></td>
+      <td>Industrials</td>
+      <td>Aerospace &amp; Defense</td>
+      <td>$38.26</td>
+      <td class="gain">11.74%</td>
+      <td>1.07</td>
+      <td>73.7</td>
+      <td>25.25</td>
+      <td>18.37</td>
+      <td>198.7%</td>
+      <td>-10.3%</td>
+      <td>1.6 - Buy<small>B:7 H:1 S:1</small></td>
+      <td>38.0</td>
+      <td>-0.7%</td>
+      <td><div class="score"><span style="width:50%;background:#d97706"></span></div><small>50</small></td>
+      <td><span class="badge" style="background:#d97706">Confirm</span></td>
+      <td class="desc">Intuitive Machines, Inc. operates as a space infrastructure and services company in the United States. The company provides delivery services for the transportation and delivery of payloads, such as satellites, scientifi</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>EL</strong><small>The Estée Lauder Companies Inc.</small></td>
+      <td>Consumer Defensive</td>
+      <td>Household &amp; Personal Products</td>
+      <td>$88.32</td>
+      <td class="gain">11.93%</td>
+      <td>1.78</td>
+      <td>60.2</td>
+      <td>78.11</td>
+      <td>2.15</td>
+      <td>4.6%</td>
+      <td>14.9%</td>
+      <td>2.4 - Buy<small>B:11 H:13 S:1</small></td>
+      <td>95.43</td>
+      <td>8.1%</td>
+      <td><div class="score"><span style="width:45%;background:#d97706"></span></div><small>45</small></td>
+      <td><span class="badge" style="background:#d97706">Confirm</span></td>
+      <td class="desc">The Estée Lauder Companies Inc. manufactures, markets, and sells skin care, makeup, fragrance, and hair care products worldwide. The company offers skin care products, including moisturizers, serums, cleansers, toners, e</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>VSH</strong><small>Vishay Intertechnology, Inc.</small></td>
+      <td>Technology</td>
+      <td>Semiconductors</td>
+      <td>$47.25</td>
+      <td class="gain">12.05%</td>
+      <td>2.7</td>
+      <td>84.6</td>
+      <td>26.27</td>
+      <td>2.01</td>
+      <td>17.3%</td>
+      <td>2.4%</td>
+      <td>2.7 - Hold<small>B:1 H:1 S:1</small></td>
+      <td>34.0</td>
+      <td>-28.0%</td>
+      <td><div class="score"><span style="width:40%;background:#6b7280"></span></div><small>40</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">Vishay Intertechnology, Inc. manufactures and sells discrete semiconductors and passive electronic components in the United States, Germany, rest of Europe, Israel, and Asia. The company operates through six segments: Me</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>BB</strong><small>BlackBerry Limited</small></td>
+      <td>Technology</td>
+      <td>Software - Infrastructure</td>
+      <td>$7.91</td>
+      <td class="gain">18.95%</td>
+      <td>3.28</td>
+      <td>86.1</td>
+      <td>4.73</td>
+      <td>8.44</td>
+      <td>10.1%</td>
+      <td>17.4%</td>
+      <td>3.0 - Hold<small>B:1 H:6 S:1</small></td>
+      <td>5.16</td>
+      <td>-34.7%</td>
+      <td><div class="score"><span style="width:35%;background:#6b7280"></span></div><small>35</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">BlackBerry Limited provides intelligent software and services to enterprises and governments worldwide. The company operates through three segments: Secure Communications, QNX, and Licensing. The company offers BlackBerr</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>AXTI</strong><small>AXT, Inc.</small></td>
+      <td>Technology</td>
+      <td>Semiconductor Equipment &amp; Materials</td>
+      <td>$140.83</td>
+      <td class="gain">16.37%</td>
+      <td>0.84</td>
+      <td>65.2</td>
+      <td>79.52</td>
+      <td>96.08</td>
+      <td>39.1%</td>
+      <td>-5.9%</td>
+      <td>N/A<small>B:3 H:2 S:0</small></td>
+      <td>87.75</td>
+      <td>-37.7%</td>
+      <td><div class="score"><span style="width:35%;background:#6b7280"></span></div><small>35</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">AXT, Inc. designs, develops, manufactures, and distributes compound and single element semiconductor substrates. The company provides indium phosphide for use in data center connectivity using light/lasers, high-speed da</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>LION</strong><small>Lionsgate Studios Corp.</small></td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>$14.95</td>
+      <td class="gain">15.80%</td>
+      <td>3.08</td>
+      <td>77.8</td>
+      <td>11.22</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>1.9 - Buy<small>B:7 H:3 S:0</small></td>
+      <td>14.5</td>
+      <td>-3.0%</td>
+      <td><div class="score"><span style="width:35%;background:#6b7280"></span></div><small>35</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">nan</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>HPQ</strong><small>HP Inc.</small></td>
+      <td>Technology</td>
+      <td>Computer Hardware</td>
+      <td>$25.24</td>
+      <td class="gain">15.25%</td>
+      <td>2.54</td>
+      <td>73.5</td>
+      <td>19.98</td>
+      <td>0.41</td>
+      <td>6.9%</td>
+      <td>6.2%</td>
+      <td>3.1 - Hold<small>B:4 H:8 S:5</small></td>
+      <td>19.68</td>
+      <td>-22.0%</td>
+      <td><div class="score"><span style="width:35%;background:#6b7280"></span></div><small>35</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">HP Inc. provides personal computing, printing, 3D printing, hybrid work, gaming, and other related technologies in the United States and internationally. The company operates through three segments: Personal Systems, Pri</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>RDW</strong><small>Redwire Corporation</small></td>
+      <td>Industrials</td>
+      <td>Aerospace &amp; Defense</td>
+      <td>$17.49</td>
+      <td class="gain">13.94%</td>
+      <td>1.93</td>
+      <td>88.7</td>
+      <td>10.4</td>
+      <td>9.38</td>
+      <td>57.9%</td>
+      <td>-71.8%</td>
+      <td>1.5 - Strong Buy<small>B:8 H:1 S:1</small></td>
+      <td>14.33</td>
+      <td>-18.0%</td>
+      <td><div class="score"><span style="width:35%;background:#6b7280"></span></div><small>35</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">Redwire Corporation provides critical space solutions and space infrastructure for government and commercial customers in the United States, Europe, and internationally. It operates in two segments Space and Defense Tech</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>ATKR</strong><small>Atkore Inc.</small></td>
+      <td>Industrials</td>
+      <td>Electrical Equipment &amp; Parts</td>
+      <td>$84.75</td>
+      <td class="gain">11.25%</td>
+      <td>2.01</td>
+      <td>70.6</td>
+      <td>68.33</td>
+      <td>1.0</td>
+      <td>4.2%</td>
+      <td>5.5%</td>
+      <td>N/A<small>B:1 H:3 S:0</small></td>
+      <td>84.33</td>
+      <td>-0.5%</td>
+      <td><div class="score"><span style="width:35%;background:#6b7280"></span></div><small>35</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">Atkore Inc. engages in the manufacture and sale of electrical, mechanical, safety, and infrastructure products and solutions in the United States and internationally. It operates through two segments, Electrical, and Saf</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>HPE</strong><small>Hewlett Packard Enterprise Company</small></td>
+      <td>Technology</td>
+      <td>Communication Equipment</td>
+      <td>$37.58</td>
+      <td class="gain">10.63%</td>
+      <td>1.59</td>
+      <td>78.6</td>
+      <td>27.23</td>
+      <td>1.4</td>
+      <td>18.4%</td>
+      <td>7.6%</td>
+      <td>2.2 - Buy<small>B:11 H:11 S:1</small></td>
+      <td>29.92</td>
+      <td>-20.4%</td>
+      <td><div class="score"><span style="width:35%;background:#6b7280"></span></div><small>35</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">Hewlett Packard Enterprise Company, together with its subsidiaries, develops intelligent solutions in the United States, the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan, and internationally. It ope</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>ASTS</strong><small>AST SpaceMobile, Inc.</small></td>
+      <td>Technology</td>
+      <td>Communication Equipment</td>
+      <td>$105.86</td>
+      <td class="gain">10.01%</td>
+      <td>1.79</td>
+      <td>74.5</td>
+      <td>84.2</td>
+      <td>483.74</td>
+      <td>1952.2%</td>
+      <td>-1014.0%</td>
+      <td>2.6 - Hold<small>B:3 H:6 S:2</small></td>
+      <td>83.47</td>
+      <td>-21.2%</td>
+      <td><div class="score"><span style="width:35%;background:#6b7280"></span></div><small>35</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to be accessible direc</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>QCOM</strong><small>QUALCOMM Incorporated</small></td>
+      <td>Technology</td>
+      <td>Semiconductors</td>
+      <td>$238.16</td>
+      <td class="gain">11.60%</td>
+      <td>1.65</td>
+      <td>71.0</td>
+      <td>156.56</td>
+      <td>5.64</td>
+      <td>-3.5%</td>
+      <td>22.1%</td>
+      <td>2.6 - Hold<small>B:12 H:22 S:5</small></td>
+      <td>177.81</td>
+      <td>-25.3%</td>
+      <td><div class="score"><span style="width:30%;background:#6b7280"></span></div><small>30</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">QUALCOMM Incorporated engages in the development and commercialization of foundational technologies for the wireless industry worldwide. It operates through three segments: Qualcomm CDMA Technologies (QCT); Qualcomm Tech</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>P</strong><small>Everpure, Inc.</small></td>
+      <td>Technology</td>
+      <td>Computer Hardware</td>
+      <td>$87.2</td>
+      <td class="gain">10.38%</td>
+      <td>1.51</td>
+      <td>68.2</td>
+      <td>69.38</td>
+      <td>7.91</td>
+      <td>N/A</td>
+      <td>-18.5%</td>
+      <td>1.9 - Buy<small>B:14 H:5 S:1</small></td>
+      <td>89.89</td>
+      <td>3.1%</td>
+      <td><div class="score"><span style="width:30%;background:#6b7280"></span></div><small>30</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">Everpure, Inc. provides data storage and management technologies, products, and services in the United States and internationally. Its Purity software is shared across its products and provides enterprise-class data serv</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>NVTS</strong><small>Navitas Semiconductor Corporation</small></td>
+      <td>Technology</td>
+      <td>Semiconductors</td>
+      <td>$29.25</td>
+      <td class="gain">19.98%</td>
+      <td>1.73</td>
+      <td>72.6</td>
+      <td>14.19</td>
+      <td>168.81</td>
+      <td>-38.7%</td>
+      <td>-317.7%</td>
+      <td>N/A<small>B:2 H:5 S:1</small></td>
+      <td>13.59</td>
+      <td>-53.5%</td>
+      <td><div class="score"><span style="width:15%;background:#6b7280"></span></div><small>15</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">Navitas Semiconductor Corporation designs, develops, and markets power semiconductors in the United States, Europe, China, rest of Asia, and internationally. The company offers gallium nitride power integrated circuits, </td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>SWKS</strong><small>Skyworks Solutions, Inc.</small></td>
+      <td>Technology</td>
+      <td>Semiconductors</td>
+      <td>$82.42</td>
+      <td class="gain">12.08%</td>
+      <td>1.39</td>
+      <td>66.9</td>
+      <td>61.34</td>
+      <td>3.07</td>
+      <td>-1.0%</td>
+      <td>7.7%</td>
+      <td>2.8 - Hold<small>B:5 H:18 S:2</small></td>
+      <td>74.16</td>
+      <td>-10.0%</td>
+      <td><div class="score"><span style="width:15%;background:#6b7280"></span></div><small>15</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">Skyworks Solutions, Inc., together with its subsidiaries, develops, manufactures, and markets analog and mixed-signal semiconductor products and solutions in the United States, Taiwan, China, South Korea, Europe, the Mid</td>
+    </tr>
+
+    <tr>
+      <td class="symbol"><strong>VOYG</strong><small>Voyager Technologies, Inc.</small></td>
+      <td>Industrials</td>
+      <td>Aerospace &amp; Defense</td>
+      <td>$44.64</td>
+      <td class="gain">11.32%</td>
+      <td>1.61</td>
+      <td>82.3</td>
+      <td>29.33</td>
+      <td>15.83</td>
+      <td>2.1%</td>
+      <td>-126.7%</td>
+      <td>1.7 - Buy<small>B:8 H:1 S:1</small></td>
+      <td>38.3</td>
+      <td>-14.2%</td>
+      <td><div class="score"><span style="width:15%;background:#6b7280"></span></div><small>15</small></td>
+      <td><span class="badge" style="background:#7c3aed">Speculative</span></td>
+      <td class="desc">Voyager Technologies, Inc. operates as a defense technology and space solutions company in the United States, Europe, the Middle East, and internationally. It operates through three segments: Defense &amp; National Security,</td>
+    </tr></tbody>
+      </table>
+    </div>
+  </main>
+  <script>
+    const directions = {};
+    function sortTable(col) {
+      const table = document.getElementById("tbl");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      directions[col] = !directions[col];
+      rows.sort((a, b) => {
+        const x = a.cells[col].innerText.trim();
+        const y = b.cells[col].innerText.trim();
+        return directions[col]
+          ? x.localeCompare(y, undefined, { numeric: true })
+          : y.localeCompare(x, undefined, { numeric: true });
+      });
+      rows.forEach(row => tbody.appendChild(row));
+    }
+  </script>
+</body>
+</html>
